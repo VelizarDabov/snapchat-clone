@@ -15,7 +15,9 @@ import SendIcon from "@mui/icons-material/Send";
 import {v4 as uuid} from 'uuid';
 import {db, storage }from './firebase'
 import firebase from 'firebase/compat/app';
+import { selectUser } from "./features/appSlice";
 const Preview = () => {
+  const user = useSelector(selectUser)
   const cameraImage = useSelector(selectCameraImage);
   const history = useHistory();
   const dispatch = useDispatch();
@@ -36,7 +38,7 @@ uploadTask.on('state_changed', null, (error) => console.log(error),() => {
             imageUrl:url,
             username: 'Velizar',
             read:false,
-            // profilePic:,
+            profilePic:user.profilePic,
             timestamp:firebase.firestore.FieldValue.serverTimestamp(),
 
         })

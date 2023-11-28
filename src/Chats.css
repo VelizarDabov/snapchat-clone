@@ -17,6 +17,9 @@ height: 50px;
     height: 25px!important;
     width: 25px !important;
 }
+.chat:hover{
+    opacity: 0.8;
+}
 .chats__search{
 display: flex;
 align-items: center;
@@ -45,9 +48,27 @@ padding-left: 8px;
     background-color: white;
 overflow: scroll;
 }
-.chats__posts::-webkit-scrollbar{
+.chats__post::-webkit-scrollbar{
     display: none;
 }
-/* .chats__chatIcon{
-
-} */
+.chats__takePicIcon{
+    position: absolute;
+    background-color: white;
+    border-radius: 200px;
+    color: gray;
+    font-size: 40px;
+ cursor: pointer;
+ bottom: 0;
+ left: 50%;
+ transform:translate(-50%, -50%)
+}
+.chats__takePicIcon:hover{
+    opacity: 0.8;
+}
+.chats__chatIcon{
+    color: white;
+}
+.chats__searchIcon{
+    color: white;
+    font-size: 13px !important;
+}
